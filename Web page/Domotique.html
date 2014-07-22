@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+    <title>Supervision domotique du jardin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style>
+      #ghumi1, #ghumi2, #g3, #g4 {
+        width:200px; height:160px;
+        display: inline-block;
+        margin: 1em;
+      }
+	  
+
+    </style>
+  </head>
+  <body>
+	 <style>
+	 
+	 .carousel-page{ width:100%;height:890px !important;background-color:#5f666d;color:white; }
+	 
+	 </style>
+		
+	 
+<div id="my_carousel" class="carousel slide" data-ride="carousel">
+  
+  <!-- Bulles -->
+  <ol class="carousel-indicators">
+    <li data-target="#my_carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#my_carousel" data-slide-to="1"></li>
+    <li data-target="#my_carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+  
+  	<!-- Page 1 -->
+    <div class="item active">
+      
+      <div class="carousel-page">
+	    <div class="container">
+	  
+			<img src="./images/humidity_temp.png" class="img-responsive" style="margin:0px auto; " />
+			<div class="col-lg-12">
+
+				<div class="row">
+				  <div class="col-lg-12">
+				  <div class="col-lg-12 text-center">
+					<label class="control-label " >Température et Humidité de l'air ambiante</label>
+				  </div>
+				  <div class="col-lg-4 col-lg-offset-2">
+					<input type="text" class="form-control" value="---" readonly id="var-val-6"><br/><br/>
+				  </div>
+				  <div class="col-lg-4">
+					<input type="text" class="form-control" value="---" readonly id="var-val-7"><br/><br/>
+				  </div>
+				  </div>
+				</div>
+
+			</div>
+			<div class="carousel-caption">Affichage température et humidité</div>
+	  </div>
+	</div>
+    </div>   
+    
+    <!-- Page 2 -->
+    <div class="item">
+
+	  <div class="carousel-page">
+		<div class="container">
+			<img src="./images/meteo.png" class="img-responsive img-rounded" style="margin:0px auto; "  />
+
+ 				<div class="row">
+				  <div class="col-lg-12">   
+				  <div class="col-lg-5 col-lg-offset-1 text-center" >
+					<label class="control-label" >Humidité  de la terre des tomates cerise :</label>
+					 <div align="center"><div id="ghumi1"></div></div> 
+					<div class="col-lg-12 ">
+						<div class="col-lg-6 "><button type="button" class="btn btn-primary btn-block" id="button-1">BUTTON 1</button></div>
+						<div class="col-lg-6 "><input type="text" class="form-control" value="---" readonly id="var-val-1"></div>
+					</div>
+				  </div>
+				  <div class="col-lg-5 text-center">
+				    <label class="control-label" for="inputWarning2">Humidité  de la terre des fraises :</label>
+					<div align="center"><div id="ghumi2"></div></div> 
+					<div class="col-lg-12">
+						<div class="col-lg-6 "><button type="button" class="btn btn-primary  btn-block" id="button-3">BUTTON 3</button></div>
+						<div class="col-lg-6 "><input type="text" class="form-control" value="---" readonly id="var-val-3"></div>
+					</div>
+				  </div>
+				  </div>
+
+				  <div class="col-lg-12" style="margin-top:50px"> 
+				    <div class="col-lg-4"></div>
+				    <div  class="col-lg-4 text-center"><input type="text" class="form-control" value="---" readonly id="var-val-5"></div>
+				    <div class="col-lg-4"></div>
+				  </div> 		  
+				  </div>
+			<div class="carousel-caption">Santé et arrosage des plantes</div>
+		</div>  
+	  </div>   
+    </div>  
+    
+     <!-- Page 3 -->
+    <div class="item">
+	  <div class="carousel-page">
+	    <div class="container">
+		    <img src="./images/Solar_cell.png" class="img-responsive img-rounded" style="margin:0px auto;"  />
+			
+			<div class="col-lg-12">
+
+				<div class="row">
+				  <div class="col-lg-12">   
+				  <div class="col-lg-4 col-lg-offset-4">
+					<label class="control-label" >Tension Batterie</label>
+					<input type="text" class="form-control" value="---" readonly id="var-val-9"><br/><br/>
+				  </div>
+
+				  </div>
+				  <div class="col-lg-12 text-center"><label class="control-label" for="inputWarning2">Niveau de luminosité extérieur :</label></div>
+				   <div align="center"><div id="g4"></div></div>
+				</div>
+				
+			</div>
+		  
+		    <div class="carousel-caption">Informations du panneau solaire</div>
+	   </div>
+	  </div>
+    </div> 
+ 
+  </div>
+
+  <!-- Controles -->
+  <a class="left carousel-control" href="#my_carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#my_carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ 
+</div> 
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/justgage.1.0.1.min.js"></script> 
+	<script type="text/javascript" src="js/domotic.js"></script>
+    <script>
+      $(function () {
+        $('.carousel').carousel({ interval: 30000 });
+      });
+    </script>
+	
+	<script>
+
+  </body>
+</html>
