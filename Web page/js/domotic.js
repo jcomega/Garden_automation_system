@@ -12,8 +12,8 @@
         //--------------------------------------------------------------
         // START - EDITABLE USER DATA
         //
-        var accessToken = "37cffcfe12acb6e15bf91dbd7a3e6b2cab003ff0";
-        var coreID = "48ff70065067555045571287";
+        var accessToken = "xxxxxxxxxaccessTokenxxxxxxxxxx";
+        var coreID = "xxxxxcoreIDxxxxxxxx";
         // App Heading
         var appHeading = "Page de contrôle domotique du jardin";
         // Function 1
